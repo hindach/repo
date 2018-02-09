@@ -6,7 +6,7 @@ package my_first.my_first;
  */
 public class App 
 {
-    public static void main( String[] args )//66jjj
+    public static void main( String[] args )//66jjjhhhh
     {
     	
         System.out.println( "Hello World!" );
