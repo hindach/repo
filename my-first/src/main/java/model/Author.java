@@ -27,7 +27,7 @@ public class Author implements Serializable{
 	Long id;
 private String firstName;
 private String LastName;
-private Set<Book> categories = new HashSet<Book>(0);
+private Set<Book> books = new HashSet<Book>(0);
 
 @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 @JoinTable(name = "Book_Author", catalog = "mkyongdb", joinColumns = {
@@ -35,10 +35,10 @@ private Set<Book> categories = new HashSet<Book>(0);
 		inverseJoinColumns = { @JoinColumn(name = "BOOK_ID",
 				nullable = false, updatable = false) })
 public Set<Book> getCategories() {
-	return categories;
+	return books;
 }
-public void setCategories(Set<Book> categories) {
-	this.categories = categories;
+public void setCategories(Set<Book> books) {
+	this.books = books;
 }
 public Author() {
 	super();
@@ -71,7 +71,7 @@ public Author(String firstName, String lastName) {
 }
 @Id
 @GeneratedValue(strategy = IDENTITY)
-@Column(name = "Author_ID", unique = true, nullable = false)
+@Column(name = "AUTHOR_ID", unique = true, nullable = false)
 public Long getId() {
 	return id;
 }
