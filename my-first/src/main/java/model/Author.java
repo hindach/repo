@@ -43,11 +43,11 @@ public void setCategories(Set<Book> books) {
 public Author() {
 	super();
 }
-public Author(String firstName, String lastName, Set<Book> categories) {
+public Author(String firstName, String lastName, Set<Book> books) {
 	super();
 	this.firstName = firstName;
 	LastName = lastName;
-	this.categories = categories;
+	this.books = books;
 }
 @Column(name = "FIRST_NAME", unique = true, nullable = false, length = 20)
 
